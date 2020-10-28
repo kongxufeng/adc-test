@@ -84,7 +84,7 @@ public class DriverUtils {
 			ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.addArguments("disable-infobars", "headless", "disable-gpu", "--user-data-dir=C:\\Users\\xiejun.HTYUNLU\\AppData\\Local\\Google\\Chrome\\User Data\\Default");//正式用，后台静默运行
 			//chromeOptions.addArguments("disable-infobars", "disable-gpu", "--user-data-dir=C:\\Users\\ggh\\AppData\\Local\\Google\\Chrome\\User Data1\\Default");//调试用，取消后台静默运行,浏览器缓存
-			chromeOptions.addArguments("disable-infobars", "disable-gpu", "headless");
+			chromeOptions.addArguments("disable-infobars", "disable-gpu", "headless","--no-sandbox");
 			caps.setCapability("chromeOptions", chromeOptions);
 
 		}else {
