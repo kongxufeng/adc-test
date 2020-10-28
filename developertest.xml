@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="黄埔制造云自动化测试" parallel="tests" thread-count="4" >
+	<listeners>
+		<listener class-name="com.htyl.adc.utils.TestFailListener" />
+	</listeners>
+	<test name="应用实例服务流程测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.AddAppInsServiceTest">
+				<methods>
+					<include name="addAppTest" />
+				    <include name="createServiceTest" />
+					<include name="deleteServiceFun" />
+					<include name="deleteAppFun" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="中间件实例服务流程测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.AddMiddleWareTest">
+				<methods>
+					<include name="addMiddleWareTest" />
+					<include name="createServiceTest" />
+					<include name="deleteMiddleWareTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="镜像测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.CreatMirrorTest">
+				<methods>
+					<include name="createMirrorTest" />
+					<include name="deleteMirrorTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="环境测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.CreatEnvTest">
+				<methods>
+					<include name="creatEnv" />
+					<include name="deleteEnv" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,60 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="黄埔制造云自动化测试" parallel="tests" thread-count="6">
+	<listeners>
+		<listener class-name="com.htyl.adc.utils.TestFailListener" />
+	</listeners>
+	<test name="研发设计试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="设备监控试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest4" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="能耗管理试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest5" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="计划排产试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest6" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="供应链管理试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest7" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="其它试用测试" enabled="true">
+		<classes>
+			<class name="com.htyl.adc.test.ApplicationTest" >
+				<methods>
+					<include name="applicationTest8" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
